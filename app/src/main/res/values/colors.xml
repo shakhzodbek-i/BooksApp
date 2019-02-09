@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#232F34</color>
     <color name="btn_color">#232F34</color>
     <color name="colorAccent">#F9AA33</color>
+    <color name="colorEditText">#E2E2E2</color>
+    <color name="colorText">#4A6572</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="color_link">#1155CC</color>
 </resources>
