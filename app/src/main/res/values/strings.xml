@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BooksApp</string>
+    <string name="get_start_btn">Get started</string>
+    <string name="registration_btn">Registration</string>
 </resources>
