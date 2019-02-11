@@ -58,7 +58,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/password"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"/>
+        android:layout_marginRight="8dp"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/password"

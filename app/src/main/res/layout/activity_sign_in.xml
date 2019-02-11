@@ -86,7 +86,7 @@
         android:textColor="@color/colorWhite"
         android:textAlignment="center"
         android:textIsSelectable="true"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
 
 </android.support.constraint.ConstraintLayout>
