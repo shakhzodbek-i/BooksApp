@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">BooksApp</string>
+    <string name="app_name">LITElib</string>
     <string name="get_start_btn">Get started</string>
     <string name="registration_btn">Registration</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_btn">Enter</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="content_descriptor">Logo</string>
 </resources>
