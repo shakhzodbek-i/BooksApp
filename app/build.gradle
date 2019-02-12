@@ -5,6 +5,8 @@ android {
     defaultConfig {
         applicationId "corp.king.booksapp"
 
+        vectorDrawables.useSupportLibrary = true
+
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
 
@@ -35,6 +37,11 @@ android {
     }
 }
 
+
+
+dependencies {
+
+}
 dependencies {
     // Support Libraries
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
@@ -60,4 +67,7 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+
+    // vector asset
+    implementation 'com.android.support:appcompat-v7:28.0.0'
 }

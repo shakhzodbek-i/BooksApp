@@ -69,7 +69,7 @@
         android:layout_below="@+id/confirm_pass"
         android:background="@drawable/btn_background_solid"
         android:fontFamily="@font/work_sans_semibold"
-        android:text="@string/enter_btn"
+        android:text="@string/sign_in_btn"
         android:textAllCaps="false"
         android:textColor="@color/btn_color"
         android:textSize="18sp"/>
