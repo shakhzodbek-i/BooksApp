@@ -6,7 +6,7 @@
     <data>
         <variable
             name="listener"
-            type="corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter.OnClickListener"/>
+            type="corp.king.booksapp.presentation.callbacks.StartCallback"/>
     </data>
     <android.support.constraint.ConstraintLayout
 
@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:padding="20dp"
         android:background="@drawable/start_page"
-        tools:context=".presentation.views.IStartActivity">
+        tools:context=".presentation.views.StartActivity">
 
         <ImageView
             android:contentDescription="@string/content_descriptor"
