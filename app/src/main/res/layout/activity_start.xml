@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:padding="20dp"
         android:background="@drawable/start_page"
-        tools:context=".presentation.views.IStartActivity">
+        tools:context=".presentation.views.StartActivity">
 
         <ImageView
             android:contentDescription="@string/content_descriptor"

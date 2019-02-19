@@ -11,7 +11,7 @@ import corp.king.booksapp.presentation.presenters.StartPresenter;
 import corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
 
-public class IStartActivity extends AppCompatActivity implements IStartView {
+public class StartActivity extends AppCompatActivity implements IStartView {
 
     private ActivityStartBinding binding;
     private IStartPresenter presenter;
