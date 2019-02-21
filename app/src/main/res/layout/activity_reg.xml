@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/start_page"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="20dp">
 
     <ImageView
-        android:contentDescription="@string/content_descriptor"
         android:id="@+id/new_logo"
         android:layout_width="300dp"
         android:layout_height="160dp"
-        android:src="@drawable/logo_new1"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/content_descriptor"
+        android:src="@drawable/logo_new1"
         app:layout_constraintBottom_toTopOf="@id/full_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,19 +25,19 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/new_logo"
-        android:fontFamily="@font/work_sans_semibold"
-        android:background="@drawable/edit_text"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:hint="@string/full_name"
-        android:paddingLeft="30dp"
-        android:inputType="text"
-        android:textColor="@color/colorBlack"
-        android:singleLine="true"
-        android:layout_marginBottom="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toTopOf="@id/email"/>
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/work_sans_semibold"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        android:paddingLeft="30dp"
+        android:singleLine="true"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/email" />
 
 
     <EditText
@@ -46,6 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/full_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/work_sans_semibold"
@@ -56,66 +57,62 @@
         android:textAllCaps="false"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/password"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"/>
+        app:layout_constraintBottom_toTopOf="@id/password" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/email"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/work_sans_semibold"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:layout_marginBottom="25dp"
         android:paddingLeft="30dp"
         android:singleLine="true"
         android:textAllCaps="false"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toTopOf="@id/confirm_pass"/>
+
+        app:layout_constraintBottom_toTopOf="@id/confirm_pass" />
 
     <EditText
         android:id="@+id/confirm_pass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/password"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/enter"
-        android:fontFamily="@font/work_sans_semibold"
-        android:inputType="textPassword"
-        android:background="@drawable/edit_text"
-        android:textAllCaps="false"
-        android:paddingLeft="30dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/work_sans_semibold"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:paddingLeft="30dp"
+        android:singleLine="true"
+        android:textAllCaps="false"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
-        android:hint="@string/confirm_password"
-        android:singleLine="true"/>
+        app:layout_constraintBottom_toTopOf="@+id/enter" />
 
     <Button
         android:id="@+id/enter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="60dp"
         android:layout_width="116dp"
         android:layout_height="37dp"
         android:layout_below="@+id/confirm_pass"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/btn_background_solid"
         android:fontFamily="@font/work_sans_semibold"
         android:text="@string/enter_btn"
         android:textAllCaps="false"
         android:textColor="@color/btn_color"
-        android:textSize="18sp"/>
-
-
-
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
