@@ -11,7 +11,7 @@ import corp.king.booksapp.presentation.presenters.StartPresenter;
 import corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
 
-public class IStartActivity extends AppCompatActivity implements IStartView {
+public class StartActivity extends AppCompatActivity implements IStartView {
 
     private ActivityStartBinding binding;
     private IStartPresenter presenter;
@@ -23,7 +23,7 @@ public class IStartActivity extends AppCompatActivity implements IStartView {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_start);
         presenter = new StartPresenter(this);
-        binding.setListener(presenter.getListener());
+        binding.setListener(presenter);
     }
 
     @Override
@@ -31,4 +31,12 @@ public class IStartActivity extends AppCompatActivity implements IStartView {
         Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void navigateToSignInActivity() {
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent);
+    }
+
+
 }
