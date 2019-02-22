@@ -14,12 +14,13 @@ import java.util.ArrayList;
 import corp.king.booksapp.R;
 import corp.king.booksapp.data.Book;
 import corp.king.booksapp.data.ReadBook;
+import corp.king.booksapp.presentation.callbacks.BookSavingListener;
 
-public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHolder> {
+public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooksAdapter.MyLibViewHolder> {
 
     private ArrayList<ReadBook> books;
 
-    public MyLibAdapter(ArrayList<ReadBook> books) {
+    public MyLibSavedBooksAdapter(ArrayList<ReadBook> books) {
         this.books = books;
     }
 
@@ -33,8 +34,7 @@ public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHol
     @Override
     public void onBindViewHolder(@NonNull MyLibViewHolder viewHolder, int i) {
         Book book = books.get(i).book;
-        int bookProgress = books.get(i).progress;
-        viewHolder.bind(book.coverURL, book.name, book.author, book.publish, bookProgress);
+//        viewHolder.bind(book.coverURL, book.name, book.author, book.publish);
     }
 
     @Override
@@ -49,8 +49,7 @@ public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHol
         private TextView bookName;
         private TextView bookAuthor;
         private TextView bookPublish;
-        private TextView progressPercent;
-        private ProgressBar readingProgress;
+        private ImageView bookSaved;
 
         public MyLibViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,18 +58,17 @@ public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHol
             bookName = itemView.findViewById(R.id.book_name);
             bookAuthor = itemView.findViewById(R.id.book_author);
             bookPublish = itemView.findViewById(R.id.book_publish);
-            progressPercent = itemView.findViewById(R.id.progressBar);
-            readingProgress = itemView.findViewById(R.id.progress_percent);
+            bookSaved = itemView.findViewById(R.id.book_saved);
+
 
         }
-        public void bind(String bookCover, String bookName, String bookAuthor, String bookPublish, int progress){
+        public void bind(String bookCover, String bookName, String bookAuthor, String bookPublish, BookSavingListener listener){
             //TODO: Implement image parsing with Picasso
 
             this.bookName.setText(bookName);
             this.bookAuthor.setText(bookAuthor);
             this.bookPublish.setText(bookPublish);
-            this.progressPercent.setText(String.valueOf(progress)+'%');
-            this.readingProgress.setProgress(progress);
+//            this.bookSaved.setOnClickListener(listener);
         }
     }
 
