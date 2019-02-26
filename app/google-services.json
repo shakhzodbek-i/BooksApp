@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "426285302978",
-    "firebase_url": "https://booksapp-2510b.firebaseio.com",
-    "project_id": "booksapp-2510b",
-    "storage_bucket": "booksapp-2510b.appspot.com"
+    "project_number": "542961346026",
+    "firebase_url": "https://litelib-c9cdb.firebaseio.com",
+    "project_id": "litelib-c9cdb",
+    "storage_bucket": "litelib-c9cdb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:426285302978:android:a0be3b85a15ad551",
+        "mobilesdk_app_id": "1:542961346026:android:a0be3b85a15ad551",
         "android_client_info": {
           "package_name": "corp.king.booksapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "426285302978-9udtbr3kqmj5msgs47uc2bd97fri83g6.apps.googleusercontent.com",
+          "client_id": "542961346026-01picit1tk7r169p4nbs0i14der3q56h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "corp.king.booksapp",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "426285302978-0dpebe73fgd36ogn48i7m5aqs9efd965.apps.googleusercontent.com",
+          "client_id": "542961346026-mtu5g6tdp8ebem7o6ev1hg3ogqd2rn36.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAS74SG5umu0fzKMH1_9EjS2uSy_0Zt5eI"
+          "current_key": "AIzaSyBLx5oscAnwD7n1w-5pu0wSRUBqwNmCU9g"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "426285302978-0dpebe73fgd36ogn48i7m5aqs9efd965.apps.googleusercontent.com",
+              "client_id": "542961346026-mtu5g6tdp8ebem7o6ev1hg3ogqd2rn36.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
