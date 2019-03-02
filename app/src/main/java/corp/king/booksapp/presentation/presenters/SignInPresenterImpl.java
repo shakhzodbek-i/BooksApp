@@ -27,6 +27,7 @@ public class SignInPresenterImpl implements ISignInPresenter {
                 mView.navigateToMainPage();
             }else{
                 mView.showError(task.getException().getMessage());
+
             }
         });
     }

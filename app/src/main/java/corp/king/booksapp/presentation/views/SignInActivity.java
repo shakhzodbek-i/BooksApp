@@ -65,7 +65,7 @@ public class SignInActivity extends AppCompatActivity implements ISignInView {
             }
             showProgress();
             mPresenter.signIn(email, password);
-        });
+                    });
     }
 
     private void initView() {

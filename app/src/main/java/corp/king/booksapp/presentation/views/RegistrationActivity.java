@@ -2,6 +2,7 @@ package corp.king.booksapp.presentation.views;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -108,7 +109,9 @@ public class RegistrationActivity extends AppCompatActivity {
                public void onComplete(@NonNull Task<AuthResult> task) {
                    progressBar.setVisibility(View.GONE);
                    if (task.isSuccessful()) {
-                       Toast.makeText(getApplicationContext(), "User Registered Successfully", Toast.LENGTH_SHORT).show();
+                       Intent intent=new Intent(RegistrationActivity.this, MainActivity.class );
+                       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                       startActivity(intent);
                    } else{
                        if(task.getException() instanceof FirebaseAuthUserCollisionException){
                            Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
