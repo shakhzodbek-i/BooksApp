@@ -2,6 +2,7 @@ package corp.king.booksapp.presentation.views;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
@@ -11,18 +12,23 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import corp.king.booksapp.R;
-import corp.king.booksapp.presentation.presenters.SignInPresenterImpl;
-import corp.king.booksapp.presentation.presenters.interfaces.ISignInPresenter;
-import corp.king.booksapp.presentation.views.interfaces.ISignInView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class SignInActivity extends AppCompatActivity implements ISignInView {
+import corp.king.booksapp.R;
+
+public class SignInActivity extends AppCompatActivity  {
 
    private Button signIn;
    private EditText email;
    private EditText password;
    private ProgressBar progressBar;
-    private ISignInPresenter mPresenter;
+   private FirebaseAuth mAuth;
+
+
 
 
     @Override
@@ -30,10 +36,10 @@ public class SignInActivity extends AppCompatActivity implements ISignInView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        FirebaseApp.initializeApp(this);
+        mAuth=FirebaseAuth.getInstance();
+         initView();
 
-        initView();
-
-        mPresenter = new SignInPresenterImpl(this);
 
         signIn.setOnClickListener(view -> {
 
@@ -63,9 +69,30 @@ public class SignInActivity extends AppCompatActivity implements ISignInView {
                 this.password.requestFocus();
                 return;
             }
-            showProgress();
-            mPresenter.signIn(email, password);
-                    });
+          progressBar.setVisibility(View.VISIBLE);
+
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                progressBar.setVisibility(View.GONE);
+                if(task.isSuccessful()){
+                    finish();
+                    Intent intent=new Intent(SignInActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
+                }else{
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser()!=null){
+            finish();
+            startActivity(new Intent(this, ProfileActivity.class));
+        }
     }
 
     private void initView() {
@@ -73,27 +100,5 @@ public class SignInActivity extends AppCompatActivity implements ISignInView {
         email = findViewById(R.id.login);
         password= findViewById(R.id.password);
         progressBar= findViewById(R.id.prog_bar);
-    }
-
-    @Override
-    public void navigateToMainPage() {
-        Intent intent=new Intent(SignInActivity.this, MainActivity.class );
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-    }
-
-    @Override
-    public void showProgress() {
-        progressBar.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void hideProgress() {
-        progressBar.setVisibility(View.GONE);
-    }
-
-    @Override
-    public void showError(String msg) {
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }
