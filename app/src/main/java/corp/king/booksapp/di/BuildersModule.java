@@ -1,7 +1,9 @@
 package corp.king.booksapp.di;
 
 
+import corp.king.booksapp.presentation.views.MyLibActivity;
 import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
 
 /**
  * Привязывает все субкомпоненты внутри приложения
@@ -9,8 +11,7 @@ import dagger.Module;
 @Module
 public abstract class BuildersModule {
 
-//    @AuthActivityScope
-//    @ContributesAndroidInjector(modules = AuthActivityModule.class)
-//    abstract AuthActivity bindAuthActivity();
-
+    @MyLibActivityScope
+    @ContributesAndroidInjector(modules = MyLibActivityModule.class)
+    abstract MyLibActivity bindMyLibActivity();
 }

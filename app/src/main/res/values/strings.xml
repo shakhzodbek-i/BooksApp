@@ -10,4 +10,11 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="content_descriptor">Logo</string>
+    <string name="book_name">Educated</string>
+    
+    <!--Constants-->
+    <string name="server_client_id">616518522420-opmdffgc4htp258t5h5t4tc6q4kqj32j.apps.googleusercontent.com</string>
+    <string name="client_secret" >J80ZAR7v1vfVuN061chS6Rkm</string>
+    <string name="api_key">AIzaSyARRU_4PePaSYbUU2piUvEm1mNv4IotS9c</string>
+    <string name="oauth_client_key">616518522420-pnhsg5aoiglftsh5ifcemoibs6f61vd6.apps.googleusercontent.com</string>
 </resources>

@@ -2,8 +2,8 @@ package corp.king.booksapp.presentation.views;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import corp.king.booksapp.R;
 import corp.king.booksapp.databinding.ActivityStartBinding;
@@ -20,7 +20,6 @@ public class StartActivity extends AppCompatActivity implements IStartView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_start);
         presenter = new StartPresenter(this);
         binding.setListener(presenter);
