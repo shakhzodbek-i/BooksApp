@@ -2,19 +2,20 @@ package corp.king.booksapp.presentation.presenters;
 
 import android.view.View;
 
+import corp.king.booksapp.presentation.callbacks.StartCallback;
 import corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
 
-public class StartPresenter implements IStartPresenter, IStartPresenter.OnClickListener {
+public class StartPresenterImpl implements IStartPresenter, StartCallback {
 
     private IStartView mView;
 
-    public StartPresenter(IStartView mView) {
+    public StartPresenterImpl(IStartView mView) {
         this.mView = mView;
     }
 
     @Override
-    public void onGetStartedClicked(View view) {
+    public void onGetStartedClicked(View view) {mView.navigateToSignInActivity();
     }
 
     @Override
