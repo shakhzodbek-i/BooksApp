@@ -9,17 +9,20 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import corp.king.booksapp.R;
-import corp.king.booksapp.data.Book;
-import corp.king.booksapp.data.ReadBook;
+import corp.king.booksapp.models.ReadBook;
+import corp.king.booksapp.models.Volume;
 
-public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHolder> {
+public class MyLibReadBooksAdapter extends RecyclerView.Adapter<MyLibReadBooksAdapter.MyLibViewHolder> {
 
     private ArrayList<ReadBook> books;
 
-    public MyLibAdapter(ArrayList<ReadBook> books) {
+    public MyLibReadBooksAdapter(ArrayList<ReadBook> books) {
         this.books = books;
     }
 
@@ -32,9 +35,14 @@ public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MyLibViewHolder viewHolder, int i) {
-        Book book = books.get(i).book;
+        Volume book = books.get(i).book;
+        Volume.ImageLinks imageLink = book.getVolumeInfo().getImageLinks();
+        String title = book.getVolumeInfo().getTitle();
+        List<String> author = book.getVolumeInfo().getAuthors();
+        String publish = book.getVolumeInfo().getPublishedDate();
         int bookProgress = books.get(i).progress;
-        viewHolder.bind(book.coverURL, book.name, book.author, book.publish, bookProgress);
+
+        viewHolder.bind(imageLink.getMedium(), title, author.toString(), publish, bookProgress);
     }
 
     @Override
@@ -63,8 +71,13 @@ public class MyLibAdapter extends RecyclerView.Adapter<MyLibAdapter.MyLibViewHol
             readingProgress = itemView.findViewById(R.id.progress_percent);
 
         }
-        public void bind(String bookCover, String bookName, String bookAuthor, String bookPublish, int progress){
-            //TODO: Implement image parsing with Picasso
+        public void bind(String imageUrl, String bookName, String bookAuthor, String bookPublish, int progress){
+            //TODO: Implement image parsing with Glide
+
+            Glide.with(itemView.getContext())
+                    .load(imageUrl)
+                    .centerCrop()
+                    .into(bookCover);
 
             this.bookName.setText(bookName);
             this.bookAuthor.setText(bookAuthor);

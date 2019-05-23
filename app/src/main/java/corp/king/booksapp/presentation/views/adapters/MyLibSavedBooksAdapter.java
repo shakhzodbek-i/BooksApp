@@ -6,14 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import corp.king.booksapp.R;
-import corp.king.booksapp.data.Book;
-import corp.king.booksapp.data.ReadBook;
+import corp.king.booksapp.models.ReadBook;
+import corp.king.booksapp.models.Volume;
 import corp.king.booksapp.presentation.callbacks.BookSavingListener;
 
 public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooksAdapter.MyLibViewHolder> {
@@ -33,7 +32,7 @@ public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooks
 
     @Override
     public void onBindViewHolder(@NonNull MyLibViewHolder viewHolder, int i) {
-        Book book = books.get(i).book;
+        Volume book = books.get(i).book;
 //        viewHolder.bind(book.coverURL, book.name, book.author, book.publish);
     }
 
@@ -63,7 +62,7 @@ public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooks
 
         }
         public void bind(String bookCover, String bookName, String bookAuthor, String bookPublish, BookSavingListener listener){
-            //TODO: Implement image parsing with Picasso
+            //TODO: Implement image parsing with Glade
 
             this.bookName.setText(bookName);
             this.bookAuthor.setText(bookAuthor);
