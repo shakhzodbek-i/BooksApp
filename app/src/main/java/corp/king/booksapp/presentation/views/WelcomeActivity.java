@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import corp.king.booksapp.R;
 
-public class WellcomeActivity  extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT=3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class WellcomeActivity  extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent= new Intent(WellcomeActivity.this, StartActivity.class);
+                Intent homeIntent= new Intent(WelcomeActivity.this, StartActivity.class);
                 startActivity(homeIntent);
                 finish();
             }
