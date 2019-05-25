@@ -1,8 +1,8 @@
-package corp.king.booksapp.data.api;
+package corp.king.booksapp.model.data.api;
 
 import java.util.List;
 
-import corp.king.booksapp.models.Volume;
+import corp.king.booksapp.model.domain.Volume;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

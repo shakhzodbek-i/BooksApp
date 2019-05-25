@@ -1,4 +1,4 @@
-package corp.king.booksapp.data;
+package corp.king.booksapp.model.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;

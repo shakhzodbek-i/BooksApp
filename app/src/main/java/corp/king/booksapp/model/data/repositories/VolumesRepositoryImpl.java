@@ -1,9 +1,9 @@
-package corp.king.booksapp.data.repositories;
+package corp.king.booksapp.model.data.repositories;
 
 import java.util.List;
 
-import corp.king.booksapp.data.api.VolumesApi;
-import corp.king.booksapp.models.Volume;
+import corp.king.booksapp.model.data.api.VolumesApi;
+import corp.king.booksapp.model.domain.Volume;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

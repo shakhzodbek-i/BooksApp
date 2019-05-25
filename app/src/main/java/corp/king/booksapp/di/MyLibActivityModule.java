@@ -1,11 +1,11 @@
 package corp.king.booksapp.di;
 
-import corp.king.booksapp.data.api.BookshelfApi;
-import corp.king.booksapp.data.api.VolumesApi;
-import corp.king.booksapp.data.repositories.BookshelfRepository;
-import corp.king.booksapp.data.repositories.BookshelfRepositoryImpl;
-import corp.king.booksapp.data.repositories.VolumeRepository;
-import corp.king.booksapp.data.repositories.VolumesRepositoryImpl;
+import corp.king.booksapp.model.data.api.BookshelfApi;
+import corp.king.booksapp.model.data.api.VolumesApi;
+import corp.king.booksapp.model.data.repositories.BookshelfRepository;
+import corp.king.booksapp.model.data.repositories.BookshelfRepositoryImpl;
+import corp.king.booksapp.model.data.repositories.VolumeRepository;
+import corp.king.booksapp.model.data.repositories.VolumesRepositoryImpl;
 import dagger.Module;
 import dagger.Provides;
 

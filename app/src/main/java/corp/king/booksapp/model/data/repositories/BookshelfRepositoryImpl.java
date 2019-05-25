@@ -1,10 +1,10 @@
-package corp.king.booksapp.data.repositories;
+package corp.king.booksapp.model.data.repositories;
 
 import java.util.List;
 
-import corp.king.booksapp.data.api.BookshelfApi;
-import corp.king.booksapp.models.Bookshelf;
-import corp.king.booksapp.models.BookshelvesList;
+import corp.king.booksapp.model.data.api.BookshelfApi;
+import corp.king.booksapp.model.domain.Bookshelf;
+import corp.king.booksapp.model.domain.BookshelvesList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

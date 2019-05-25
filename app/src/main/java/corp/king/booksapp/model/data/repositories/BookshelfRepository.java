@@ -1,8 +1,8 @@
-package corp.king.booksapp.data.repositories;
+package corp.king.booksapp.model.data.repositories;
 
 import java.util.List;
 
-import corp.king.booksapp.models.Bookshelf;
+import corp.king.booksapp.model.domain.Bookshelf;
 
 public interface BookshelfRepository {
 

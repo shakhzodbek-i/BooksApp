@@ -1,4 +1,4 @@
-package corp.king.booksapp.models
+package corp.king.booksapp.model.domain
 
 data class Volume(var kind: String,
                   var id: String,

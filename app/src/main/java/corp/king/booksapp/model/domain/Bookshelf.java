@@ -1,4 +1,4 @@
-package corp.king.booksapp.models;
+package corp.king.booksapp.model.domain;
 
 import java.text.SimpleDateFormat;
 

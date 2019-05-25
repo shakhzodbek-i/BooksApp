@@ -6,9 +6,9 @@ import android.content.Context;
 import javax.inject.Singleton;
 
 import corp.king.booksapp.App;
-import corp.king.booksapp.data.SharedPreferencesHelper;
-import corp.king.booksapp.data.api.BookshelfApi;
-import corp.king.booksapp.data.api.VolumesApi;
+import corp.king.booksapp.model.data.SharedPreferencesHelper;
+import corp.king.booksapp.model.data.api.BookshelfApi;
+import corp.king.booksapp.model.data.api.VolumesApi;
 import dagger.Module;
 import dagger.Provides;
 import retrofit2.Retrofit;
