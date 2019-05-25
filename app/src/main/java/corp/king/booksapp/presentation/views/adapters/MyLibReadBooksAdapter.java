@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import corp.king.booksapp.R;
-import corp.king.booksapp.models.ReadBook;
-import corp.king.booksapp.models.Volume;
+import corp.king.booksapp.model.domain.ReadBook;
+import corp.king.booksapp.model.domain.Volume;
 
 public class MyLibReadBooksAdapter extends RecyclerView.Adapter<MyLibReadBooksAdapter.MyLibViewHolder> {
 
