@@ -6,27 +6,23 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import corp.king.booksapp.R;
 import corp.king.booksapp.databinding.ItemSavedBookBinding;
-import corp.king.booksapp.model.domain.Bookshelf;
-import corp.king.booksapp.model.domain.ReadBook;
 import corp.king.booksapp.model.domain.Volume;
-import corp.king.booksapp.presentation.callbacks.BookSavingListener;
+import corp.king.booksapp.presentation.listeners.BookSavingListener;
 
 public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooksAdapter.MyLibViewHolder> {
 
-    private ArrayList<ReadBook> mBooks;
+    private List<Volume> mBooks;
     private BookSavingListener mListener;
 
 
-    public MyLibSavedBooksAdapter(ArrayList<ReadBook> books, BookSavingListener listener) {
+    public MyLibSavedBooksAdapter(List<Volume> books, BookSavingListener listener) {
         this.mBooks = books;
         this.mListener = listener;
     }
@@ -40,7 +36,7 @@ public class MyLibSavedBooksAdapter extends RecyclerView.Adapter<MyLibSavedBooks
 
     @Override
     public void onBindViewHolder(@NonNull MyLibViewHolder viewHolder, int i) {
-        Volume book = mBooks.get(i).book;
+        Volume book = mBooks.get(i);
         String imgLink = book.getVolumeInfo().getImageLinks().getMedium();
         String bookName = book.getVolumeInfo().getTitle();
         String bookAuthor = book.getVolumeInfo().getAuthors().toString();

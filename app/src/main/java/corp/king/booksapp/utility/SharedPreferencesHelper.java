@@ -1,4 +1,4 @@
-package corp.king.booksapp.model.data;
+package corp.king.booksapp.utility;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -31,5 +31,13 @@ public class SharedPreferencesHelper {
                 .putInt(key, value)
                 .apply();
 
+    }
+
+    public String getString(String key) {
+        return  sharedPreferences.getString(key, "ERROR!");
+    }
+
+    public int getInt(String key) {
+        return sharedPreferences.getInt(key, -1);
     }
 }

@@ -1,9 +1,8 @@
-package corp.king.booksapp.presentation.callbacks;
+package corp.king.booksapp.presentation.listeners;
 
-import android.app.Dialog;
 import android.view.View;
 
-public interface StartCallback {
+public interface StartPageListener {
     void onGetStartedClicked(View view);
     void onRegistrationClicked(View view);
 }

@@ -2,11 +2,11 @@ package corp.king.booksapp.presentation.presenters;
 
 import android.view.View;
 
-import corp.king.booksapp.presentation.callbacks.StartCallback;
-import corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter;
+import corp.king.booksapp.presentation.listeners.StartPageListener;
+import corp.king.booksapp.presentation.presenters.interfaces.StartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
 
-public class StartPresenterImpl implements IStartPresenter, StartCallback {
+public class StartPresenterImpl implements StartPresenter, StartPageListener {
 
     private IStartView mView;
 
