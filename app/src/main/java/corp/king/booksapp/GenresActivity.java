@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 public class GenresActivity extends AppCompatActivity implements GenresView{
 
@@ -20,12 +21,18 @@ public class GenresActivity extends AppCompatActivity implements GenresView{
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         mPresenter = new GenresPresenter(this);
+        mPresenter.loadGenres();
     }
 
 
     @Override
     public void showGenres(int[] genresImgIds) {
-        GenreAdapter mAdapter = new GenreAdapter(genresImgIds);
+        GenreAdapter mAdapter = new GenreAdapter(genresImgIds, mPresenter);
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    @Override
+    public void showMsg(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
 }

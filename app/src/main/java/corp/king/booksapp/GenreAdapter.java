@@ -13,9 +13,10 @@ public class GenreAdapter extends RecyclerView.Adapter<GenreAdapter.ViewHolder> 
     private int[] mImageIds;
     private int mCount = 0;
     private SparseBooleanArray itemStateArray = new SparseBooleanArray();
-
-    GenreAdapter(int[] imagesIds) {
+    private OnGenreClickListener mListener;
+    GenreAdapter(int[] imagesIds, OnGenreClickListener listener) {
         this.mImageIds = imagesIds;
+        this.mListener = listener;
     }
 
     @Override
@@ -55,7 +56,7 @@ public class GenreAdapter extends RecyclerView.Adapter<GenreAdapter.ViewHolder> 
             imgCheckedView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int adapterPosition = getAdapterPosition();
+                   /* int adapterPosition = getAdapterPosition();
                     if (!itemStateArray.get(adapterPosition, false)) {
                         itemStateArray.put(adapterPosition, true);
                         imgCheckedView.setImageAlpha(50);
@@ -65,7 +66,9 @@ public class GenreAdapter extends RecyclerView.Adapter<GenreAdapter.ViewHolder> 
                         itemStateArray.put(adapterPosition, false);
                        imgCheckedView.setImageAlpha(255);
                        mCount--;
-                    }
+                    }*/
+
+                    mListener.onGenreClick(v);
                 }
             });
 

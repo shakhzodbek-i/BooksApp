@@ -1,14 +1,15 @@
 package corp.king.booksapp;
 
-public class GenresPresenter {
+import android.view.View;
+
+public class GenresPresenter implements OnGenreClickListener {
     private GenresView mView;
 
     GenresPresenter(GenresView mView) {
         this.mView = mView;
-        loadGenres();
     }
 
-    private void loadGenres(){
+    public void loadGenres(){
         int[] mGenresImgIds = generateGenres();
         mView.showGenres(mGenresImgIds);
     }
@@ -28,5 +29,10 @@ public class GenresPresenter {
                 R.drawable.psycologyhdpi,
                 R.drawable.romancehdpi
         };
+    }
+
+    @Override
+    public void onGenreClick(View view) {
+        mView.showMsg("It works!");
     }
 }
