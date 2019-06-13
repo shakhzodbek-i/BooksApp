@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">BooksApp</string>
+    <string name="next">Next</string>
+
+    <string-array name="genres" >
+        <item>science</item>
+        <item>classic</item>
+        <item>comics</item>
+        <item>history</item>
+        <item>drama</item>
+        <item>horror</item>
+        <item>crime</item>
+        <item>fantasy</item>
+        <item>mystery</item>
+        <item>politics</item>
+        <item>psychology</item>
+        <item>romance</item>
+    </string-array>
 </resources>
