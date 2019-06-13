@@ -2,14 +2,13 @@
     <string name="app_name">LITElib</string>
     <string name="get_start_btn">Get started</string>
     <string name="registration_btn">Registration</string>
+    <!-- Strings related to register -->
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="register_btn">Register</string>
     <string name="sign_in_btn">Sign in</string>
-    <string name="login">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="content_descriptor">Logo</string>
     <string name="book_name">Educated</string>
 
@@ -21,6 +20,9 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
+    <string name="login">Login</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -32,4 +34,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!--Strings related to profile picture -->
+    <string name="profile_editText_camera">Tap on camera to chooose profile picture</string>
+    <string name="editText_profilename_hint">Enter your name</string>
+    <string name="profile_btn">Save</string>
 </resources>

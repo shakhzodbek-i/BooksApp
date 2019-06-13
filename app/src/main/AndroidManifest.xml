@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".presentation.views.ProfileActivity" />
         <activity android:name=".presentation.views.MainActivity" />
-        <activity android:name=".presentation.views.StartActivity"/>
+        <activity android:name=".presentation.views.StartActivity" />
         <activity android:name=".presentation.views.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

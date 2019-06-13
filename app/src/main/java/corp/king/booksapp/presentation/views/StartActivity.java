@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import corp.king.booksapp.R;
 import corp.king.booksapp.databinding.ActivityStartBinding;
+import corp.king.booksapp.databinding.ActivityStartBindingImpl;
 import corp.king.booksapp.presentation.presenters.StartPresenterImpl;
 import corp.king.booksapp.presentation.presenters.interfaces.StartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
@@ -19,10 +20,10 @@ public class StartActivity extends AppCompatActivity implements IStartView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_start);
         presenter = new StartPresenterImpl(this);
         binding.setListener(presenter);
+
     }
 
     @Override
