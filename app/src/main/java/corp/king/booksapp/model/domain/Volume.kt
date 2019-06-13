@@ -4,7 +4,8 @@ data class Volume(var kind: String,
                   var id: String,
                   var etag: String,
                   var selfLink: String,
-                  var volumeInfo: VolumeInfo) {
+                  var volumeInfo: VolumeInfo,
+                  var userInfo: UserInfo) {
 
     data class VolumeInfo(var title: String,
                           var subtitle: String,
@@ -29,5 +30,7 @@ data class Volume(var kind: String,
                           var medium: String,
                           var large: String,
                           var extraLarge: String)
+
+    data class UserInfo(var readingPosition: String)
 
 }

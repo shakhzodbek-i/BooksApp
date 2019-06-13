@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_libBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    >
-
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/my_libBooks"
@@ -16,7 +13,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tab"
         android:src="@drawable/my_lib" />
-
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab"
@@ -29,11 +25,13 @@
 
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab_read"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Read" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab_saved"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Want to read" />
@@ -41,11 +39,10 @@
         </android.support.design.widget.TabLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/book_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tab"/>
-
-
 
 </android.support.constraint.ConstraintLayout>

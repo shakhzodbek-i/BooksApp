@@ -18,6 +18,8 @@ public interface BookshelfApi {
     Call<Bookshelf> getBookshelf(@Path("userId") String userId, @Path("shelf") String shelf);
 
     @GET("/users/{userId}/bookshelves/0/volumes?key=AIzaSyARRU_4PePaSYbUU2piUvEm1mNv4IotS9c")
-    Call<List<Volume>> getVolumes(String userId);
+    Call<List<Volume>> getSavedBooks(@Path("userId") String userId);
 
+    @GET("/users/{userId}/bookshelves/3/volumes?key=AIzaSyARRU_4PePaSYbUU2piUvEm1mNv4IotS9c")
+    Call<List<Volume>> getReadingBooks(@Path("userId") String userId);
 }

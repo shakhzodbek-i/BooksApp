@@ -3,7 +3,7 @@
     <data>
         <variable
             name="listener"
-            type="corp.king.booksapp.presentation.callbacks.BookSavingListener" />
+            type="corp.king.booksapp.presentation.listeners.BookSavingListener" />
     </data>
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

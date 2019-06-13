@@ -6,7 +6,7 @@
     <data>
         <variable
             name="listener"
-            type="corp.king.booksapp.presentation.callbacks.StartCallback"/>
+            type="corp.king.booksapp.presentation.listeners.StartPageListener"/>
     </data>
     <android.support.constraint.ConstraintLayout
 

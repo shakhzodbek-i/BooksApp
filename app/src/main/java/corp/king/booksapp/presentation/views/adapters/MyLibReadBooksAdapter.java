@@ -11,18 +11,16 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import corp.king.booksapp.R;
-import corp.king.booksapp.model.domain.ReadBook;
 import corp.king.booksapp.model.domain.Volume;
 
 public class MyLibReadBooksAdapter extends RecyclerView.Adapter<MyLibReadBooksAdapter.MyLibViewHolder> {
 
-    private ArrayList<ReadBook> books;
+    private List<Volume> books;
 
-    public MyLibReadBooksAdapter(ArrayList<ReadBook> books) {
+    public MyLibReadBooksAdapter(List<Volume> books) {
         this.books = books;
     }
 
@@ -35,12 +33,12 @@ public class MyLibReadBooksAdapter extends RecyclerView.Adapter<MyLibReadBooksAd
 
     @Override
     public void onBindViewHolder(@NonNull MyLibViewHolder viewHolder, int i) {
-        Volume book = books.get(i).book;
+        Volume book = books.get(i);
         Volume.ImageLinks imageLink = book.getVolumeInfo().getImageLinks();
         String title = book.getVolumeInfo().getTitle();
         List<String> author = book.getVolumeInfo().getAuthors();
         String publish = book.getVolumeInfo().getPublishedDate();
-        int bookProgress = books.get(i).progress;
+        int bookProgress = 0; //TODO: Reading position identifier
 
         viewHolder.bind(imageLink.getMedium(), title, author.toString(), publish, bookProgress);
     }
