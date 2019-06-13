@@ -12,7 +12,7 @@
         android:layout_height="160dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/content_descriptor"
-        android:src="@drawable/logo_new1"
+        android:src="@drawable/ic_welcome_logo"
         app:layout_constraintBottom_toTopOf="@id/full_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

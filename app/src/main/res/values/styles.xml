@@ -17,15 +17,6 @@
         <item name="textAllCaps">false</item>
     </style>
 
-
-    <style name="MyTabTextTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabTextAppearance">@style/MyTabText</item>
-    </style>
-
-    <style name="MyTabText" parent="TextAppearance.Design.Tab">
-        <item name="textAllCaps">false</item>
-    </style>
-
     <!-- Progressbar style. -->
     <style name="MyProgressbar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:colorAccent">@color/colorAccent</item>

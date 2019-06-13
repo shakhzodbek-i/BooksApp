@@ -12,7 +12,7 @@
             android:id="@+id/wellcome_page"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/ic_wellcome_logo"
+            android:src="@drawable/ic_welcome_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import corp.king.booksapp.R;
 import corp.king.booksapp.databinding.ActivityStartBinding;
-import corp.king.booksapp.databinding.ActivityStartBindingImpl;
 import corp.king.booksapp.presentation.presenters.StartPresenterImpl;
 import corp.king.booksapp.presentation.presenters.interfaces.StartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;

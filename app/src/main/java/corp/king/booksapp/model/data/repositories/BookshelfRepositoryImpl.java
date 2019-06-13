@@ -5,6 +5,7 @@ import java.util.List;
 import corp.king.booksapp.model.data.api.BookshelfApi;
 import corp.king.booksapp.model.domain.Bookshelf;
 import corp.king.booksapp.model.domain.BookshelvesList;
+import corp.king.booksapp.model.domain.Volume;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -47,5 +48,15 @@ public class BookshelfRepositoryImpl implements BookshelfRepository {
         });
 
         return mBookshelf;
+    }
+
+    @Override
+    public List<Volume> getReadingBooks(String userId) {
+        return null;
+    }
+
+    @Override
+    public List<Volume> getSavedBooks(String userId) {
+        return null;
     }
 }

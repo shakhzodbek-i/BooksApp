@@ -37,10 +37,10 @@ public class MyLibActivity extends AppCompatActivity implements IMyLibView {
     private MyLibSavedBooksAdapter mSavedAdapter;
 
     @Inject
-    private BookshelfRepository mBookshelfRepository;
+    BookshelfRepository mBookshelfRepository;
 
     @Inject
-    private SharedPreferencesHelper mSharedPreference;
+    SharedPreferencesHelper mSharedPreference;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

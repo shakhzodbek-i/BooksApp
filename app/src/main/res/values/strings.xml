@@ -13,11 +13,9 @@
     <string name="book_name">Educated</string>
 
     <!--Constants-->
-    <string name="server_client_id">616518522420-opmdffgc4htp258t5h5t4tc6q4kqj32j.apps.googleusercontent.com</string>
     <string name="client_secret" >J80ZAR7v1vfVuN061chS6Rkm</string>
     <string name="api_key">AIzaSyARRU_4PePaSYbUU2piUvEm1mNv4IotS9c</string>
     <string name="oauth_client_key">616518522420-pnhsg5aoiglftsh5ifcemoibs6f61vd6.apps.googleusercontent.com</string>
-    <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
     <string name="login">Login</string>
@@ -54,4 +52,5 @@
     <string name="profile_editText_camera">Tap on camera to chooose profile picture</string>
     <string name="editText_profilename_hint">Enter your name</string>
     <string name="profile_btn">Save</string>
+    <string name="enter_btn">Enter</string>
 </resources>

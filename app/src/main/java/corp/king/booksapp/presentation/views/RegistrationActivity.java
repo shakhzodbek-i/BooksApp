@@ -38,8 +38,8 @@ public class RegistrationActivity extends AppCompatActivity {
         email=(EditText)findViewById(R.id.email);
         password=(EditText)findViewById(R.id.password);
         EditText confirmpass = (EditText) findViewById(R.id.confirm_pass);
-        btnRegister=(Button)findViewById(R.id.registerMe);
-        progressBar=(ProgressBar)findViewById(R.id.progressbar);
+        btnRegister=(Button)findViewById(R.id.register);
+        progressBar=(ProgressBar)findViewById(R.id.progressbar_forimg);
 
 
         btnRegister.setOnClickListener(view -> {
