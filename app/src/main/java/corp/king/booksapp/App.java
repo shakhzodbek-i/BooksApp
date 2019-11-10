@@ -3,6 +3,8 @@ package corp.king.booksapp;
 import android.app.Activity;
 import android.app.Application;
 
+import com.google.firebase.FirebaseApp;
+
 import javax.inject.Inject;
 
 import corp.king.booksapp.di.DaggerAppComponent;
@@ -18,6 +20,8 @@ public class App extends Application implements HasActivityInjector {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        FirebaseApp.initializeApp(this);
 
         DaggerAppComponent
                 .builder()

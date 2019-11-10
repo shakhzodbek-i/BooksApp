@@ -17,4 +17,10 @@
         <item name="textAllCaps">false</item>
     </style>
 
+    <!-- Progressbar style. -->
+    <style name="MyProgressbar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:color">@android:color/white</item>
+    </style>
+
 </resources>

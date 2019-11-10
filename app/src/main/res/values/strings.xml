@@ -2,19 +2,55 @@
     <string name="app_name">LITElib</string>
     <string name="get_start_btn">Get started</string>
     <string name="registration_btn">Registration</string>
+    <!-- Strings related to register -->
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="enter_btn">Enter</string>
-    <string name="login">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
+    <string name="register_btn">Register</string>
+    <string name="sign_in_btn">Sign in</string>
     <string name="content_descriptor">Logo</string>
     <string name="book_name">Educated</string>
-    
+
     <!--Constants-->
-    <string name="server_client_id">616518522420-opmdffgc4htp258t5h5t4tc6q4kqj32j.apps.googleusercontent.com</string>
     <string name="client_secret" >J80ZAR7v1vfVuN061chS6Rkm</string>
     <string name="api_key">AIzaSyARRU_4PePaSYbUU2piUvEm1mNv4IotS9c</string>
     <string name="oauth_client_key">616518522420-pnhsg5aoiglftsh5ifcemoibs6f61vd6.apps.googleusercontent.com</string>
+
+    <!-- Strings related to login -->
+    <string name="login">Login</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    //navbar menu
+    <string name="bootm_sheet_my_library">My Library</string>
+    <string name="bootm_sheet_settings">Settings</string>
+    <string name="bootm_sheet_about_us">About us</string>
+    <string name="bootm_sheet_logout">Log out</string>
+    <string name="bottom_sheet_language">Language</string>
+    <string name="bottom_sheet_help">Help</string>
+    <string name="bottm_sheet_username">username</string>
+    <!-- Client id-->
+    <string name="server_client_id">616518522420-pnhsg5aoiglftsh5ifcemoibs6f61vd6.apps.googleusercontent.com</string>
+    // sign in result
+    <string name="logout">Log Out</string>
+    <string name="email_result">Email display here</string>
+    <string name="name_result">Name display here</string>
+
+    <!--Strings related to profile picture -->
+    <string name="profile_editText_camera">Tap on camera to chooose profile picture</string>
+    <string name="editText_profilename_hint">Enter your name</string>
+    <string name="profile_btn">Save</string>
+    <string name="enter_btn">Enter</string>
 </resources>

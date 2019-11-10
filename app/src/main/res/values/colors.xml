@@ -9,5 +9,5 @@
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="color_link">#1155CC</color>
-    <color name="book_info">#C4C4C4</color>
+    <color name="color_bookInfoText">#C4C4C4</color>
 </resources>

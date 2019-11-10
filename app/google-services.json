@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "542961346026",
+    "firebase_url": "https://litelib-c9cdb.firebaseio.com",
+    "project_id": "litelib-c9cdb",
+    "storage_bucket": "litelib-c9cdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542961346026:android:a0be3b85a15ad551",
+        "android_client_info": {
+          "package_name": "corp.king.booksapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542961346026-01picit1tk7r169p4nbs0i14der3q56h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "corp.king.booksapp",
+            "certificate_hash": "017898549f290d6aa91fb595ccd51b0d00032461"
+          }
+        },
+        {
+          "client_id": "542961346026-mtu5g6tdp8ebem7o6ev1hg3ogqd2rn36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLx5oscAnwD7n1w-5pu0wSRUBqwNmCU9g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542961346026-mtu5g6tdp8ebem7o6ev1hg3ogqd2rn36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

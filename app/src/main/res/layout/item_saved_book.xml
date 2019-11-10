@@ -3,7 +3,7 @@
     <data>
         <variable
             name="listener"
-            type="corp.king.booksapp.presentation.callbacks.BookSavingListener" />
+            type="corp.king.booksapp.presentation.listeners.BookSavingListener" />
     </data>
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -36,7 +36,7 @@
                 android:textSize="21sp"
                 android:layout_marginBottom="8dp"
                 tools:text="Educated: A Memoir"
-                android:textColor="@color/book_info"/>
+                android:textColor="@color/color_bookInfoText"/>
             <TextView
                 android:id="@+id/book_author"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:textSize="21sp"
                 android:layout_marginBottom="8dp"
                 tools:text="by Tara Westover"
-                android:textColor="@color/book_info"/>
+                android:textColor="@color/color_bookInfoText"/>
 
             <TextView
                 android:id="@+id/book_publish"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 tools:text="February 20, 2018"
-                android:textColor="@color/book_info"/>
+                android:textColor="@color/color_bookInfoText"/>
 
         </LinearLayout>
 

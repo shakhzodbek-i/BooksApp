@@ -7,22 +7,22 @@ import android.support.v7.app.AppCompatActivity;
 
 import corp.king.booksapp.R;
 import corp.king.booksapp.databinding.ActivityStartBinding;
-import corp.king.booksapp.presentation.presenters.StartPresenter;
-import corp.king.booksapp.presentation.presenters.interfaces.IStartPresenter;
+import corp.king.booksapp.presentation.presenters.StartPresenterImpl;
+import corp.king.booksapp.presentation.presenters.interfaces.StartPresenter;
 import corp.king.booksapp.presentation.views.interfaces.IStartView;
 
 public class StartActivity extends AppCompatActivity implements IStartView {
 
     private ActivityStartBinding binding;
-    private IStartPresenter presenter;
+    private StartPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_start);
-        presenter = new StartPresenter(this);
-        binding.setListener(presenter.getListener());
+        presenter = new StartPresenterImpl(this);
+        binding.setListener(presenter);
+
     }
 
     @Override
@@ -30,4 +30,12 @@ public class StartActivity extends AppCompatActivity implements IStartView {
         Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void navigateToSignInActivity() {
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent);
+    }
+
+
 }
